@@ -36,6 +36,51 @@
             "Resource": [
                 "arn:aws:iam::*:role/OrganizationAccountAccessRole"
             ]
+		},
+		{
+            "Sid": "DenyDomainRegistration",
+            "Effect": "Deny",
+            "Action": [
+                "route53domains:*"
+            ],
+            "Resource": [
+                "*"
+            ]
+		},
+		{
+			"Sid": "DenyReservedInstancePurchase",
+			"Effect": "Deny",
+			"Action": [
+				"ec2:AcceptReservedInstancesExchangeQuote",
+				"ec2:AcceptVpcPeeringConnection",
+				"ec2:CancelReservedInstancesListing",
+				"ec2:CreateReservedInstancesListing",
+				"ec2:DescribeReservedInstances",
+				"ec2:DescribeReservedInstancesListings",
+				"ec2:DescribeReservedInstancesModifications",
+				"ec2:DescribeReservedInstancesOfferings",
+				"ec2:GetHostReservationPurchasePreview",
+				"ec2:GetReservedInstancesExchangeQuote",
+				"ec2:ModifyReservedInstances",
+				"ec2:PurchaseHostReservation",
+				"ec2:PurchaseReservedInstancesOffering",
+				"ec2:PurchaseScheduledInstances"
+			],
+			"Resource": [
+				"*"
+			]
+		},
+		{
+			"Sid": "PreventVpcPeering",
+			"Effect": "Deny",
+			"Action": [
+				"ec2:CreateVpcPeeringConnection",
+				"ec2:DeleteVpcPeeringConnection",
+				"ec2:ModifyVpcPeeringConnectionOptions"
+			],
+			"Resource": [
+				"*"
+			]
 		}
 	]
 }
