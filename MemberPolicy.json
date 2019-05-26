@@ -19,23 +19,23 @@
 			}
 		},
 		{
-          "Sid": "RoleProtection",
-          "Effect": "Deny",
-          "Action": [
-            "iam:AttachRolePolicy",
-            "iam:DeleteRole",
-            "iam:DeleteRolePermissionsBoundary",
-            "iam:DeleteRolePolicy",
-            "iam:DetachRolePolicy",
-            "iam:PutRolePermissionsBoundary",
-            "iam:PutRolePolicy",
-            "iam:UpdateAssumeRolePolicy",
-            "iam:UpdateRole",
-            "iam:UpdateRoleDescription"
-          ],
-          "Resource": [
-            "arn:aws:iam::*:role/OrganizationAccountAccessRole"
-          ]
+            "Sid": "RoleProtection",
+            "Effect": "Deny",
+            "Action": [
+                "iam:AttachRolePolicy",
+                "iam:DeleteRole",
+                "iam:DeleteRolePermissionsBoundary",
+                "iam:DeleteRolePolicy",
+                "iam:DetachRolePolicy",
+                "iam:PutRolePermissionsBoundary",
+                "iam:PutRolePolicy",
+                "iam:UpdateAssumeRolePolicy",
+                "iam:UpdateRole",
+                "iam:UpdateRoleDescription"
+            ],
+            "Resource": [
+                "arn:aws:iam::*:role/OrganizationAccountAccessRole"
+            ]
 		}
 	]
 }
