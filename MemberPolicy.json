@@ -2,7 +2,7 @@
 	"Version": "2012-10-17",
 	"Statement": [
 		{
-			"Sid": "DenyAlternateRegions",
+			"Sid": "RegionEnforcement",
 			"Effect": "Deny",
 			"Action": "*",
 			"Resource": [
@@ -19,7 +19,7 @@
 			}
 		},
 		{
-          "Sid": "AWSOrganizationsMasterRoleDenyDelete",
+          "Sid": "RoleProtection",
           "Effect": "Deny",
           "Action": [
             "iam:AttachRolePolicy",
