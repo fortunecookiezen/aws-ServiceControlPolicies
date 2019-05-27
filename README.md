@@ -25,7 +25,7 @@ It implements the following:
 
 This policy is a _whitelist_ policy of aws hipaa eligible services based upon [HIPAA Eligible Services Reference 4/25/2019 Update](https://aws.amazon.com/compliance/hipaa-eligible-services-reference/). It contains all of the HIPAA Eligible services as well as aws services necessary to operate an account, such as iam, support, billing, etc.
 
-If you just apply this policy and think that does it for you, without having a privacy consultant review it as well as your control environment, you are sofa king lazy and stupid you should just hang it up. That caveat aside, it's a useful start for an organization.
+If you just apply this policy and think that does it for you without having a privacy consultant review the policy as well as your control environment, you are sofa king lazy and stupid you should just hang it up. That caveat aside, it's a useful starting point for an organization.
 
 ### References
 
