@@ -21,9 +21,17 @@ It implements the following:
 4. Sid: "DenyReservedInstancePurchase" denies the listing, purchasing, and trading of reserved instances. This can be optimized at the organization master level.
 5. Sid: "PreventVpcPeering" prevents vpc peering. If you have a member account policy that prohibits east-west network traffic, this can be used to enforce that.
 
+## AllowHipaaServices.json
+
+This policy is a _whitelist_ policy of aws hipaa eligible services based upon [HIPAA Eligible Services Reference 4/25/2019 Update](https://aws.amazon.com/compliance/hipaa-eligible-services-reference/). It contains all of the HIPAA Eligible services as well as aws services necessary to operate an account, such as iam, support, billing, etc.
+
+If you just apply this policy and think that does it for you, without having a privacy consultant review it as well as your control environment, you are sofa king lazy and stupid you should just hang it up. That caveat aside, it's a useful start for an organization.
+
 ### References
 
 https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scp.html
 https://docs.aws.amazon.com/organizations/latest/userguide/SCP_strategies.html
 https://docs.aws.amazon.com/general/latest/gr/rande-manage.html
 https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_example-scps.html
+https://aws.amazon.com/compliance/hipaa-eligible-services-reference/
+https://aws.amazon.com/blogs/security/how-to-use-service-control-policies-in-aws-organizations-to-enforce-healthcare-compliance-in-your-aws-account/
